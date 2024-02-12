@@ -16,7 +16,6 @@ const orderSchema = new mongoose.Schema(
             product: {
                 type: mongoose.Schema.Types.ObjectId,
                 required: true, 
-                ref: "Product",
             },
         }
     ],
@@ -38,22 +37,22 @@ const orderSchema = new mongoose.Schema(
     },
     itemsPrice: {
         type: Number,
-        requiredd: true,
+        required: true,
         default: 0.0,
     },
     taxPrice: {
         type: Number,
-        requiredd: true,
+        required: true,
         default: 0.0,
     },
     shippingPrice: {
         type: Number,
-        requiredd: true,
+        required: true,
         default: 0.0,
     },
     totalPrice: {
         type: Number,
-        requiredd: true,
+        required: true,
         default: 0.0,
     },
     isPaid: { 
