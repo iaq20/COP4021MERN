@@ -8,7 +8,7 @@ import { useGetOrderDetailsQuery,
 import { PayPalButtons, usePayPalScriptReducer } from '@paypal/react-paypal-js';
 import {toast} from 'react-toastify';
 import { useEffect } from 'react';
-import { UseSelector, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 const OrderScreen = () => {
     const { id: orderId} = useParams();
@@ -147,7 +147,7 @@ const OrderScreen = () => {
                                     </Col>
                                 </Row>
                             </ListGroup.Item>
-                        ))};
+                        ))}
                     </ListGroup.Item>
                 </ListGroup>
             </Col>
@@ -184,12 +184,7 @@ const OrderScreen = () => {
 
                                 {isPending ? <Loader /> :(
                                     <div>
-                                        <Button
-                                            onClick={onApproveTest}
-                                            style={{marginBottom: '10px' }}
-                                        >
-                                            Test Pay Order
-                                        </Button>
+                                        
                                         <div>
                                             <PayPalButtons
                                                 createOrder={ createOrder }
