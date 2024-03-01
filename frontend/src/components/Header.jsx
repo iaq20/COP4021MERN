@@ -11,7 +11,7 @@ import SearchBox from './SearchBox';
 
 import React from 'react'
 
-console.log("hello");
+//console.log("hello");
 
 const Header = () => {
     const { cartItems } = useSelector((state) => state.cart);
@@ -35,7 +35,7 @@ const Header = () => {
 
   return (
     <header>
-        <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
+        <Navbar bg='primary' variant='dark' expand='lg' collapseOnSelect>
             <Container>
                 <LinkContainer to='/'>
                 <Navbar.Brand>
